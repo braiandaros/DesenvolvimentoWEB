@@ -1,4 +1,31 @@
 body{
-    background-color: chocolate;
+    color: deeppink;
+    background-color:bisque;
     text-align: center;
 }
+
+.minha-imagem{
+    width: 400px;
+    height: auto;
+
+}
+
+.tabeladias{
+    width: 80%;
+    border-collapse:initial;
+    margin: 20px auto;
+
+    th, td {
+        border: 2px solid black;
+        padding: 10px;
+        text-align: center;
+    }
+    th {
+        background: deeppink;
+        color: white;
+    }
+    tr:nth-child(even) {
+        background: #f2f2f2; /* Linhas alternadas */
+    }
+}
+
