@@ -1,0 +1,33 @@
+body{
+    background-color: cornflowerblue;
+}
+
+h1{
+    text-align: center;
+}
+
+.imagem{
+    display: block;
+    margin: 0 auto;
+    border-radius: 20px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+h3{
+    text-align: center;
+    color:  rgb(41, 41, 41);
+}
+
+h2{
+    text-align: center;
+}
+
+footer{
+    text-align: center;
+    color: black;
+}
+
+img{
+    border-radius: 20px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+}
