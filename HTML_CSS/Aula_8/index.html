@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Formularios</title>
+</head>
+<body>
+    <form id="meuFormulario" >
+        <br>
+        <label for="campo_nome">Nome: </label>
+        <input id="campo_nome" name="nome" type="text" placeholder="Digite seu nome">
+        <br>
+        <br>
+        <label for="campo_email">Email: </label>
+        <input id="campo_email" name="email" type="email" placeholder="Digite seu email">
+        <br>
+        <br>
+        <label for="campo_senha1">Senha: </label>
+        <input id="campo_senha1" name="senha1" type="password" placeholder="Digite sua Senha">
+        <br>
+        <br>
+        <label for="campo_senha2">Senha: </label>
+        <input id="campo_senha2" name="senha2" type="password" placeholder="Repita sua Senha">
+        <br>
+        <br>
+        <button class="myButton" type="submit">
+            Enviar
+        </button>
+    </form>
+    <a href="index2.html" class="PP">Proxima pagina</a>
+
+    <script>
+        document.getElementById("meuFormulario").addEventListener("submit", function(event) {
+            event.preventDefault(); // Evita que o formulário recarregue a página
+
+            const nome = document.getElementById("campo_nome").value;
+            const email = document.getElementById("campo_email").value;
+            const senha1 = document.getElementById("campo_senha1").value;
+            const senha2 = document.getElementById("campo_senha2").value;
+
+            if (senha1 !== senha2) {
+                alert("As senhas não coincidem!");
+                return;
+            }
+
+            fetch("http://localhost:3000/salvar", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({ nome, email, senha1, senha2 })
+            })
+            .then(response => response.json())
+            .then(data => {
+                alert(data.mensagem || data.erro);
+            })
+            .catch(error => console.error("Erro:", error));
+        });
+    </script>
+</body>
+</html>

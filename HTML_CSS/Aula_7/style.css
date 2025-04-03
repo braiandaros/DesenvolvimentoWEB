@@ -1,0 +1,26 @@
+.tbl{
+    font-size: 30px;
+    border: 1px solid #000000;
+    text-align: center;
+    margin: 20px auto;
+}
+
+table{
+    width: 70%;
+    border-collapse: collapse;
+}
+
+td{
+    width: 300px;
+    border: 1px solid #000000;
+    text-align: center;
+}
+
+th{
+    text-align: center;
+    background-color: aquamarine;
+}
+h1{
+    text-align: center;
+    font-size: 30px;
+}
