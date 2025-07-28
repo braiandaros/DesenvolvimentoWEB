@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Atividade de Efeitos Visuais</title>
+</head>
+  <style>
+    .tudo{
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        font-family: Arial, sans-serif;
+        color: darkolivegreen;
+    }
+
+    .btn{
+        color: darkolivegreen;
+        background-color: royalblue;
+        font-size: 25px;
+        transition: background-color 0.3s ease;
+        cursor: pointer;
+    }
+    .btn:hover {
+          background-color: #1abc9c;
+        }
+
+
+    .dv{
+        background-color: darkorange;
+        height: 200px;
+        width: 200px;
+        transition: transform 0.8s ease-in-out;
+    }
+    .dv:hover {
+          transform: scale(1.3) rotate(400deg);
+    }
+  </style>
+  <body>
+    <div class="tudo">
+      <h1>Braian junior secchin daros</h1>
+      <button class="btn">Clique aqui!!</button>
+      <br>
+      <div class="dv"> </div>
+    </div>
+  </body>
+</html>
